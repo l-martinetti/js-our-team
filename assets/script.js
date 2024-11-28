@@ -36,3 +36,35 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+// Funzione che genera ciascuna card
+
+function memberCard (member) {
+  const {name, role, email, img} = member;
+  const card = `<div class="card d-flex justify-between">
+                <div class="left-img">
+                    <img src="assets/${img}" alt="${name}">
+                </div>
+                <div class="right-info">
+                    <h4>${name}</h4>
+                    <p class="text-white">${role}</p>
+                    <p class="text-blue">${email}</p>
+                </div>
+            </div>`;
+
+  return card
+}
+
+//Funzione che aggiunge le card all'HTML
+
+function addCards(arr) {
+  const cardContainer = document.querySelector(".team-members");
+  let cards = "";
+  for (let member of arr) {
+    cards += memberCard(member);
+  }
+  return cardContainer.innerHTML = cards
+}
+
+addCards(teamMembers);
