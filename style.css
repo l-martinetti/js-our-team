@@ -1,5 +1,5 @@
 *{ 
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -53,8 +53,9 @@ div > div.team-members {
 
 .card {
     background-color: black;
-    width: calc(100% / 3 - 60px);
+    width: calc(100% / 3 - 40px);
     margin-bottom: 40px;
+    margin-inline: 20px;
 }
 
 .left-img {
@@ -73,6 +74,8 @@ div > div.team-members {
 
 .right-info p.text-white {
     font-size: 0.9rem;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .right-info p.text-blue {
@@ -82,5 +85,6 @@ div > div.team-members {
 h4 {
     text-transform: uppercase;
     color: white;
+    padding-top: 20px;
 }
 
